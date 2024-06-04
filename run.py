@@ -20,6 +20,6 @@ usd_try.buildAndTrainTheKNNModel()
 usd_try.evaluateTheKNNModel()
 
 
-usd_try.predict(15, 10, 2024, model_type='linear')
-usd_try.predict(15, 10, 2024, model_type='decision_tree')
-usd_try.predict(15, 10, 2024, model_type='knn')
+usd_try.predict(15, 5, 2024, model_type='linear')
+usd_try.predict(15, 5, 2024, model_type='decision_tree')
+usd_try.predict(15, 5, 2024, model_type='knn')

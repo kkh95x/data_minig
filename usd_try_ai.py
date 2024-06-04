@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.linear_model import LinearRegression
@@ -19,7 +18,7 @@ class UsdToTRY:
     def dataPreprocessing(self):
         self.data['Date'] = pd.to_datetime(self.data['Date'])
         self.data = self.data.drop_duplicates(subset=['Date'])
-        self.data = self.data.sort_values(by='Date', ascending=False).drop_duplicates(subset=['Date'])
+        self.data = self.data.sort_values(by='Date', ascending=False)
         self.data['day'] = self.data['Date'].dt.day
         self.data['month'] = self.data['Date'].dt.month
         self.data['year'] = self.data['Date'].dt.year
